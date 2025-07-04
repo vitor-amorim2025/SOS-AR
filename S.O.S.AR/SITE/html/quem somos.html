@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quem Somos</title>
+    <link rel="stylesheet" href="/SITE/css/style.css" />
+    <link rel="icon" href="/SITE/img/nuvem_index(500x500px).png" />
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <ul>
+          <li>
+            <p><a href="index.html">Página Principal</a></p>
+          </li>
+          <li>
+            <p><a href="page1.html">Comece Aqui</a></p>
+          </li>
+          <li>
+            <p><a href="page2.html">Aprender</a></p>
+          </li>
+          <li>
+            <p><a href="page3.html">Contribua</a></p>
+          </li>
+        </ul>
+        <img
+          src="/SITE/img/nuvem_index(500x500px).png"
+          alt="S.O.S. Ar"
+          class="nuvem"
+        />
+        <img src="/SITE/img/lua_index.png" alt="S.O.S. Ar" class="lua" />
+      </div>
+      <h1>QUEM SOMOS?</h1>
+    </header>
+    <main>
+      <section class="containergroup">
+        <article class="container">
+          <img src="/SITE/img/foto vitor.jpg" alt="Vitor Amorim" />
+          <p class="nome nowrap">Vitor SCHROEDER</p>
+          <p>IDADE:</p>
+          <p>16</p>
+          <p>EMAIL:</p>
+          <p>
+            <a href="mailto:vitoramorimschroeder@gmail.com"
+              >vitoramorimschroeder@gmail.com</a
+            >
+          </p>
+          <p>TURMA:</p>
+          <p>Info / Módulo 1</p>
+          <p>CURSO:</p>
+          <p>Informática para Internet</p>
+          <p>OBJETIVOS:</p>
+          <p>
+            Olá, eu sou o Vitor, entrei no IFES com objetivo de me preparar para
+            o mercado de trabalho de programação, em boas em empresas,
+            desenvolver o trabalho em equipe e conhecer novas ideias.
+          </p>
+        </article>
+        <article class="container">
+          <img
+            class="picture"
+            src="/SITE/img/foto miguel.jpg"
+            alt="Miguel Maioli"
+          />
+          <p class="nome nowrap">Miguel MAIOLI</p>
+          <p>IDADE:</p>
+          <p>16</p>
+          <p>EMAIL:</p>
+          <p>
+            <a href="mailto:deoliveiramaioli@gmail.com"
+              >deoliveiramaioli@gmail.com</a
+            >
+          </p>
+          <p>TURMA:</p>
+          <p>Info / Módulo 1</p>
+          <p>CURSO:</p>
+          <p>Informática para Internet</p>
+          <p>OBJETIVOS:</p>
+          <p>
+            Melhores habilidades de comunicação, aprender sobre tudo e poder
+            ajudar as pessoas com o que eu aprendi. :D
+          </p>
+        </article>
+      </section>
+      <div class="formulario">
+        <form method="post">
+          <div class="part_azul">
+            <p>
+              Quer receber mais conteúdos de qualidade? <br />
+              Coloque seu email aqui para receber mais materiais como esse!
+            </p>
+          </div>
+          <div class="part_cinza">
+            <input
+              class="email"
+              type="email"
+              name="email"
+              placeholder="Digite seu email: "
+              value="email"
+            /><br />
+            <input type="submit" name="inscrever" value="Enviar" />
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>Contate-nos</p>
+      <p>
+        2025 - Todos os direitos reservados
+        <a href="https://serra.ifes.edu.br/">serra.ifes.edu.br</a>
+      </p>
+    </footer>
+    <button id="scrollToTopBtn" title="Voltar ao topo">↑</button>
+    <script>
+      const btn = document.getElementById("scrollToTopBtn");
+
+      window.addEventListener("scroll", () => {
+        const scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight =
+          document.documentElement.scrollHeight || document.body.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+
+        // Aparece se o usuário estiver a menos de 200px do fim da página
+        if (scrollTop + clientHeight >= scrollHeight - 200) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

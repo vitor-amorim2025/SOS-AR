@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta author="Miguel Maioli Vitor Amorim" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.O.S. Ar</title>
+    <link rel="stylesheet" href="/SITE/css/style.css" />
+    <link rel="icon" href="/SITE/img/nuvem_index(500x500px).png" />
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <ul>
+          <li>
+            <p><a href="quem somos.html">Quem Somos</a></p>
+          </li>
+          <li>
+            <p><a href="page1.html">Comece Aqui</a></p>
+          </li>
+          <li>
+            <p><a href="page2.html">Aprender</a></p>
+          </li>
+          <li>
+            <p><a href="page3.html">Contribua</a></p>
+          </li>
+        </ul>
+        <img
+          src="/SITE/img/nuvem_index(500x500px).png"
+          alt="S.O.S. Ar"
+          class="nuvem"
+        />
+        <img src="/SITE/img/lua_index.png" alt="S.O.S. Ar" class="lua" />
+      </div>
+      <h1>Vamos salvar a nossa atmosfera</h1>
+      <nav>
+        <ol>
+          <li>
+            <p><a href="#artigo1">Poluição do Ar</a></p>
+          </li>
+          <li>
+            <p>
+              <a href="#artigo2"
+                >Um desafio global à saúde e ao meio ambiente</a
+              >
+            </p>
+          </li>
+          <li>
+            <p><a href="#artigo3">Um problema invisível, mas mortal</a></p>
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <article id="artigo1">
+          <p>
+            Este espaço foi criado para te guiar nessa jornada de conhecimento e
+            ação. Aqui você encontrará conteúdos que vão desde explicações
+            detalhadas sobre as fontes de poluição, até dicas práticas para
+            reduzir sua exposição e contribuir para um futuro mais saudável.
+            Explore as ferramentas interativas que disponibilizamos, acompanhe
+            as notícias e estudos mais recentes, e envolva-se nas discussões
+            para que, juntos, possamos transformar a realidade da poluição do ar
+            no Brasil e no mundo.
+          </p>
+          <h2>Poluição do Ar.</h2>
+          <p>
+            A poluição do ar é um dos problemas ambientais mais graves e
+            urgentes da atualidade. Invisível a olho nu, mas com efeitos
+            devastadores, ela impacta a saúde de bilhões de pessoas, contribui
+            para as mudanças climáticas e compromete ecossistemas inteiros. De
+            acordo com a Organização Mundial da Saúde (OMS), cerca de 7 milhões
+            de mortes prematuras ocorrem todos os anos devido à exposição à
+            poluição atmosférica — mais do que as causadas por acidentes de
+            trânsito, HIV ou malária.
+          </p>
+        </article>
+        <article id="artigo2">
+          <h2>Um desafio global à saúde e ao meio ambiente.</h2>
+          <p>
+            Estudos recentes mostram que 99% da população mundial respira ar que
+            excede os limites recomendados de qualidade. Nas grandes cidades,
+            poluentes como o dióxido de nitrogênio (NO₂), o ozônio (O₃) e o
+            material particulado fino (PM2.5) são os principais vilões,
+            provenientes sobretudo da queima de combustíveis fósseis, indústrias
+            e veículos automotores.
+          </p>
+        </article>
+        <article id="artigo3">
+          <h2>Um problema invisível, mas mortal.</h2>
+          <p>
+            A poluição do ar não escolhe vítimas. Crianças, idosos, pessoas com
+            doenças respiratórias e cardiovasculares são os mais vulneráveis,
+            mas todos estamos expostos a seus efeitos silenciosos. O material
+            particulado fino (PM2.5), por exemplo, é tão pequeno que penetra
+            profundamente nos pulmões e pode alcançar a corrente sanguínea,
+            aumentando os riscos de infartos, AVCs e até câncer de pulmão.
+            Estimativas publicadas na revista científica The Lancet indicam que
+            a poluição do ar é hoje a quarta principal causa de morte no mundo.
+          </p>
+
+          <p>
+            Além dos danos à saúde, a poluição do ar tem implicações ambientais
+            sérias. Ela contribui para o aquecimento global ao intensificar o
+            efeito estufa, afeta a biodiversidade ao alterar o equilíbrio
+            ecológico e até prejudica a produção agrícola ao reduzir a
+            fotossíntese das plantas. No Brasil, cidades como São Paulo, Belo
+            Horizonte e Porto Alegre frequentemente apresentam níveis de
+            poluentes acima do considerado seguro pela OMS, principalmente nos
+            períodos de estiagem e alta circulação de veículos.
+          </p>
+          <div class="centro">
+            <figure>
+              <img
+                src="/SITE/img/poluição1.jpg"
+                alt="Chaminés_de_fábricas_emitindo_CO2_para_a_atmosfera"
+                title="Chaminés de fábricas"
+              />
+              <figcaption class="centro">Chaminés soltando fumaça</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>Contate-nos</p>
+      <p>
+        2025 - Todos os direitos reservados ao
+        <a href="https://serra.ifes.edu.br/">serra.ifes.edu.br</a>
+      </p>
+    </footer>
+    <button id="scrollToTopBtn" title="Voltar ao topo">↑</button>
+    <script>
+      const btn = document.getElementById("scrollToTopBtn");
+
+      window.addEventListener("scroll", () => {
+        const scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight =
+          document.documentElement.scrollHeight || document.body.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+
+        // Aparece se o usuário estiver a menos de 200px do fim da página
+        if (scrollTop + clientHeight >= scrollHeight - 200) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

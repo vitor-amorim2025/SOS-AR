@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*Variáveis globais*/
+:root {
+  --FF: "Roboto", sans-serif;
+  --FS: clamp(1rem, 2.2vh, 1.5rem);
+  --BGWHITE: white;
+  --BGBLACK: #333;
+  --FONT-COLORWHITE: #000;
+  --FONT-COLORBLACK: whitesmoke;
+}
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos globais */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Estilos específicos */
+body {
+  font-family: var(--FF);
+  font-size: var(--FS);
+  overflow-x: hidden;
+}
+
+.menu {
+  width: 100%;
+  min-height: fit-content;
+  display: flex;
+  background-color: lightskyblue;
+  color: white;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.menu ul a {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+  transition: color 0.3s;
+}
+
+.menu ul a:hover {
+  font-weight: bolder;
+}
+
+.menu p {
+  margin: 1rem;
+}
+
+h1 {
+  font-size: 50px;
+  color: var(--FONT-COLORWHITE);
+  text-align: center;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 30px;
+  color: var(--FONT-COLORWHITE);
+  text-align: center;
+  margin: 10px 0;
+}
+
+nav p {
+  text-align: center;
+  margin: 0px;
+}
+
+/*Estilo especial para a página Quem Somos*/
+.containergroup {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem 0;
+  align-items: stretch;
+}
+
+.container {
+  width: 500px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+.container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 0.5rem;
+}
+
+.container p:not(.nome) {
+  align-self: flex-start;
+  margin-left: 0;
+  margin-top: 0.5rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.nome {
+  font-weight: bolder;
+  font-size: 2rem;
+  align-self: center;
+}
+
+main {
+  margin: 20px;
+}
+
+main p {
+  margin: 1rem;
+}
+
+main ol {
+  margin: 30px;
+}
+
+main ol ul {
+  list-style-type: none;
+  margin: 5px;
+}
+
+/* Botão de rolagem para o topo */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 100;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* escondido por padrão */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #555;
+}
+
+/*Tabela */
+table {
+  max-width: 100%;
+  width: 90%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background: #fff;
+  margin: auto;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+  color: var(--FONT-COLORWHITE);
+}
+
+th {
+  background: #007f5f;
+  color: #fff;
+}
+
+tbody tr:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+caption {
+  caption-side: top;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.piccontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.piccontainer img {
+  width: 300px;
+  height: 180px;
+}
+
+/*Responsividade para páginas pequenas*/
+@media (min-width: 769px) {
+  .menu div {
+    display: flex;
+  }
+}
+
+/*Colocando a lua fora da tela quando o tema preferido é claro*/
+@media (prefers-color-scheme: light) {
+  .lua {
+    position: absolute;
+    left: -9999px;
+  }
+  .container {
+    background-color: rgb(119, 178, 214);
+    color: var(--FONT-COLORBLACK);
+  }
+}
+
+/*Adaptação da página pro tema escuro*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--BGBLACK);
+    color: var(--FONT-COLORBLACK);
+  }
+  h1,
+  h2 {
+    color: var(--FONT-COLORBLACK);
+  }
+  .nuvem {
+    position: absolute;
+    left: -9999px;
+  }
+  .menu {
+    background-color: #1c1c1c;
+  }
+  a {
+    color: aliceblue;
+  }
+  a:visited {
+    color: rebeccapurple;
+  }
+  a:hover {
+    font-weight: bolder;
+  }
+  .container {
+    background-color: black;
+    color: var(--FONT-COLORBLACK);
+  }
+}
+
+/*Responsividade para telas pequenas*/
+@media (max-width: 1028px) {
+  .containergroup {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px 0;
+  }
+  .menu ul {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .menu p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  body {
+    font-size: 1rem;
+    overflow-x: hidden;
+  }
+  .lua,
+  .nuvem {
+    position: absolute;
+    left: -9999px;
+  }
+}
+
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: #017659;
+  color: white;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/*CSS do formulário abaixo*/
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  background-color: #ffffff;
+  width: 700px;
+  border-radius: 1rem;
+  text-align: center;
+  display: grid;
+}
+form p {
+  font-size: 25px;
+  text-align: center;
+  color: var(--FONT-COLORBLACK);
+  font-family: var(--FF);
+}
+form input {
+  font-size: 20px;
+  padding: 5px;
+  margin: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 6px;
+  width: 250px;
+  background-color: rgb(255, 255, 255);
+}
+.part_azul {
+  background-color: rgb(41, 147, 213);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.part_cinza {
+  background-color: rgb(43, 78, 139);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.email {
+  height: 45px;
+  width: 340px;
+}
+
+img {
+  max-width: 100%;
+}
